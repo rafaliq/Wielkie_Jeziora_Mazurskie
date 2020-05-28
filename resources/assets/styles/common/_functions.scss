@@ -1,0 +1,11 @@
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+@function gutter($x) {
+  @return $gutter * $x;
+}

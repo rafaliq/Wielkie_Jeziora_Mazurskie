@@ -1,0 +1,30 @@
+.sub-menu {
+  position: relative;
+  left: 0;
+  top: 100%;
+  list-style: none;
+  padding: $gutter ($gutter * 2) ($gutter * 2);
+  color: theme-color("light");
+  background-color: theme-color("special_dark");
+  opacity: 1;
+  transition: $transition;
+  z-index: 99;
+  width: 100%;
+  display: none;
+
+  @include media("md") {
+    opacity: 0;
+    display: initial;
+    padding: $gutter ($gutter * 2);
+    pointer-events: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+  }
+
+  .menu-item.menu-item a {
+    &:hover {
+      color: #5c91dc;
+    }
+  }
+}

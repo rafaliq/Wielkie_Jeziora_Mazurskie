@@ -1,0 +1,39 @@
+.content-block {
+  padding: ($gutter * 8) 0 ($gutter * 4) ($gutter * 1.5);
+
+  @include media(md) {
+    padding: ($gutter * 8) 0 ($gutter * 8) ($gutter * 1.5);
+  }
+
+  &__header {
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: $gutter * 3;
+
+    &::before {
+      @extend .absolute;
+
+      content: "";
+      right: unset;
+      bottom: unset;
+      top: -$gutter * 3;
+      width: $gutter * 10;
+      height: $gutter * 0.2;
+      background-color: theme-color("special");
+    }
+  }
+
+  &__content {
+    margin-bottom: $gutter * 4;
+    z-index: 10;
+    position: relative;
+  }
+
+  p {
+    margin-bottom: $gutter * 2;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

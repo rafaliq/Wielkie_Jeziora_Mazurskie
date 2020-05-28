@@ -1,0 +1,19 @@
+.grid-wide {
+  &--left {
+    .wp-block-column {
+      flex-basis: 100%;
+
+      @include media("md") {
+        flex-basis: 30%;
+      }
+
+      &:first-child {
+        flex-basis: 100%;
+
+        @include media("md") {
+          flex-basis: 70%;
+        }
+      }
+    }
+  }
+}

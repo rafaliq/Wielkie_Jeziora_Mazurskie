@@ -1,0 +1,9 @@
+.container {
+  @media (max-width: map-get($media, "md")) {
+    max-width: 100%;
+  }
+
+  @media (min-width: 1420px) {
+    max-width: 1500px;
+  }
+}

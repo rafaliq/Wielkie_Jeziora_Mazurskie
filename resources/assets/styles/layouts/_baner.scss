@@ -1,0 +1,20 @@
+.baner {
+  padding: ($gutter * 8) ($gutter * 1.5);
+  color: map-get($theme-colors, "light");
+
+  &__header {
+    margin-bottom: $gutter;
+  }
+
+  &__content {
+    margin-bottom: $gutter * 2;
+
+    @include media(sm) {
+      margin-bottom: $gutter * 8;
+    }
+  }
+
+  &__footer {
+    padding: 0;
+  }
+}

@@ -1,0 +1,15 @@
+.taglist {
+  padding: $gutter 0 ($gutter * 2);
+  list-style: none;
+
+  @include media(lg) {
+    margin-right: -$gutter * 10;
+  }
+
+  &__item {
+    display: inline-block;
+    height: 44px;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+  }
+}

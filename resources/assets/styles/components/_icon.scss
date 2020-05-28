@@ -1,0 +1,25 @@
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: $gutter * 10;
+  max-height: 100%;
+  border-radius: 100%;
+  border: 1px solid map-get($theme-colors, "light");
+
+  &--big {
+    border: 0;
+    background-color: map-get($theme-colors, "light");
+    font-size: 30px;
+    width: auto;
+  }
+
+  svg {
+    width: 80%;
+  }
+
+  &::before {
+    content: "";
+    padding-bottom: 100%;
+  }
+}

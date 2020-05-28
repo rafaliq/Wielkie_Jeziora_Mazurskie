@@ -1,0 +1,100 @@
+.post {
+  $root: &;
+
+  position: relative;
+  height: 100%;
+  background: theme-color("greyy");
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: ($gutter * 20) 1fr;
+    height: 100%;
+
+    @include media("md") {
+      grid-template-rows: 1fr;
+      grid-template-columns: 4.5fr 5.5fr;
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    position: absolute;
+
+    @include media("md") {
+      max-height: 100%;
+      position: absolute;
+    }
+  }
+
+  &__hover {
+    @extend .absolute;
+
+    background-color: theme-color("special_dark");
+    opacity: 0;
+    transition: $transition;
+    text-align: center;
+    color: theme-color("light");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      max-width: 60%;
+      display: block;
+      margin: -10% auto -10%;
+      fill: white;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+  }
+
+  &__svg {
+    fill: $white;
+  }
+
+  &__content {
+    position: relative;
+    padding: gutter(3) gutter(3) gutter(8);
+  }
+
+  &:hover {
+    #{$root}__hover {
+      opacity: 0.6;
+    }
+
+    #{$root}__button {
+      background-color: $secondary;
+    }
+
+    #{$root}__content {
+      color: $secondary;
+    }
+
+    .button {
+      right: - gutter(1);
+    }
+  }
+
+  &__excerpt {
+    padding-top: gutter(2);
+    color: $grey-dark;
+  }
+
+  &__date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: gutter(1.5) gutter(3);
+  }
+}

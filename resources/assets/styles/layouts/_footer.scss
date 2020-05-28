@@ -1,0 +1,64 @@
+.footer {
+  background-color: theme-color("light");
+  color: theme-color("special_dark");
+  padding: gutter(6) 0 0;
+  border-top: 1px solid $grey;
+
+  &__brand {
+    margin-bottom: $gutter * 3;
+    display: block;
+
+    @include media("md") {
+      display: inline;
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: $gutter * 1.5;
+    max-width: $gutter * 26;
+  }
+
+  &__link-list {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin-top: $gutter;
+  }
+
+  &__link-item {
+    margin-right: $gutter;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-row-gap: $gutter * 1.5;
+  }
+
+  &__info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__info-content {
+    font-weight: 400;
+  }
+
+  &__baner {
+    margin: ($gutter * 6) auto;
+    max-width: 100%;
+    display: block;
+  }
+
+  &__made-wrapper {
+    background-color: theme-color("special_dark");
+  }
+
+  &__made-by {
+    display: block;
+    margin: ($gutter * 3) auto;
+  }
+}

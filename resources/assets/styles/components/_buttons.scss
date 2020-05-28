@@ -1,0 +1,57 @@
+.button {
+  padding: gutter(1.5) gutter(2);
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  background-color: theme-color("light");
+  transition: $transition;
+  color: $primary;
+
+  &__svg {
+    margin-left: gutter(1);
+    fill: $white;
+    transition: $transition;
+  }
+
+  &--corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &--small {
+    padding: gutter(1.25) gutter(1.75);
+
+    &:hover {
+      svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &--dark {
+    background-color: rgba($black, 0.25);
+  }
+
+  &--primary {
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+
+  &--tag {
+    padding: $gutter ($gutter * 1.5);
+    background-color: theme-color("light");
+    border-radius: $gutter * 3;
+    border: ($gutter * 0.3) solid theme-color("greyy");
+    cursor: pointer;
+
+    &:hover {
+      //background-color: theme-color("special");
+      border-color: theme-color("special_dark");
+    }
+  }
+}

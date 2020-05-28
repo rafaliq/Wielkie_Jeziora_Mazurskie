@@ -1,0 +1,69 @@
+$hero-size: 60vh;
+
+.hero {
+  position: relative;
+  max-height: $hero-size;
+  margin-top: $gutter * 10;
+  height: $hero-size;
+  background: theme-color("special");
+  display: flex;
+  align-items: center;
+  color: map-get($theme-colors, "light");
+  text-align: center;
+  //text-transform: uppercase;
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    //max-width: $gutter * 110;
+  }
+
+  &__box {
+    position: relative;
+    display: block;
+    background-color: rgba($primary, 0.9);
+    text-align: left;
+    padding: gutter(5) gutter(5) gutter(7);
+    max-width: gutter(60);
+    transition: $transition;
+
+    &:hover {
+      color: inherit;
+      background-color: rgba($secondary, 0.9);
+
+      svg {
+        fill: $secondary;
+      }
+
+      .button {
+        right: - gutter(1);
+      }
+    }
+  }
+
+  &__text {
+    margin-top: gutter(2);
+  }
+
+  &__svg {
+    fill: $primary;
+  }
+
+  &__img {
+    position: absolute;
+    padding: 0;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    height: 1000px;
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+.page-template-page-content .hero p {
+  display: none;
+}

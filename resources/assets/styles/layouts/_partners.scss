@@ -1,0 +1,58 @@
+.partners {
+  position: relative;
+  overflow: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    list-style: none;
+    will-change: transform;
+    grid-column: 2/6;
+    grid-row: 1;
+    display: flex;
+    padding: 0;
+    animation: slide 18s linear infinite both;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__item {
+    background: theme-color("light");
+    margin: ($gutter * 6) ($gutter * 1.5);
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__link {
+    padding: ($gutter * 6) ($gutter * 3);
+    text-align: center;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: $gutter * 0.5;
+    left: 0;
+    right: 0;
+  }
+
+  &__image {
+    object-fit: contain;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-151.4%);
+  }
+}

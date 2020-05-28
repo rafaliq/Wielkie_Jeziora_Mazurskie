@@ -1,0 +1,59 @@
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  $root: &;
+
+  &--card {
+    display: grid;
+    grid-template-columns: 1;
+    grid-gap: $gutter * 3;
+
+    @include media(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #{$root}__elem {
+      padding: 0;
+
+      @include media(xs) {
+        padding: ($gutter * 5);
+        border: 1px solid darken(map-get($theme-colors, "light"), 10%);
+      }
+    }
+
+    #{$root}__icon {
+      color: map-get($theme-colors, "light");
+      background-color: map-get($theme-colors, "special_dark");
+    }
+  }
+
+  &__icon {
+    width: $gutter * 6;
+  }
+
+  &__elem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $gutter;
+
+    &--label {
+      text-transform: uppercase;
+      display: none;
+
+      @include media(lg) {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+      }
+    }
+  }
+
+  &__content {
+    margin-left: $gutter * 2;
+    max-width: calc(100% - 100px);
+  }
+}

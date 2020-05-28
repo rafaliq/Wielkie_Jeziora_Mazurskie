@@ -1,0 +1,184 @@
+$light: map-get($theme-colors, "light");
+$dark: map-get($theme-colors, "dark");
+$special: map-get($theme-colors, "special_dark");
+
+.icon-info {
+  background-color: $light;
+  padding: ($gutter * 3) 0;
+  margin: ($gutter * 3) 0 0;
+  text-transform: uppercase;
+  $root: &;
+
+  &--light {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: $gutter * 2 15px;
+    width: 100%;
+    flex-basis: initial;
+    display: flex;
+    justify-content: center;
+
+    @include media(xs) {
+      flex-basis: 1;
+      width: 50%;
+      justify-content: flex-start;
+    }
+
+    @include media(md) {
+      flex-basis: 1;
+      width: calc(100% / 3);
+      justify-content: flex-start;
+    }
+
+    @include media(lg) {
+      flex-basis: 0;
+      width: auto;
+      justify-content: flex-start;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      height: 100%;
+      border: 1px solid darken($light, 10%);
+    }
+
+    &:nth-child(5) {
+      @include media(lg) {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-child(2n) {
+      @include media(xs) {
+        &::after {
+          display: none;
+        }
+      }
+
+      @include media(lg) {
+        &::after {
+          display: initial;
+        }
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+
+        @include media(lg) {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  &__elem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    margin-bottom: $gutter * 3;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media(sm) {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      list-style: none;
+    }
+
+    &--no-list {
+      align-items: center;
+
+      @include media(sm) {
+        align-items: center;
+      }
+    }
+  }
+
+  &__icon {
+    color: map-get($theme-colors, "special_dark");
+  }
+
+  &__content {
+    padding-left: $gutter * 2;
+    width: 160px;
+  }
+
+  &__sub-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__sub-list-elem {
+    line-height: 1.1;
+    margin-bottom: $gutter * 0.5;
+  }
+
+  &--dark {
+    background-color: $dark;
+    color: $light;
+
+    #{$root}__icon {
+      background-color: transparent;
+      border: 1px solid;
+      width: 60px;
+    }
+  }
+
+  &--special,
+  &--obrazek {
+    background-color: $special;
+    color: $light;
+
+    #{$root}__icon {
+      color: $light;
+      background-color: transparent;
+      border: 1px solid;
+      width: 60px;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+
+  &--obrazek {
+    background-attachment: fixed;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $special;
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.blue-box {
+  padding: 0;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+  color: theme-color("light");
+
+  @include media("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item,
+  li {
+    background-color: theme-color("special_dark");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+    height: $gutter * 18;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: lighten(theme-color("special_dark"), 10%);
+      color: theme-color("light");
+    }
+
+    &:nth-child(2n) {
+      background-color: theme-color("special-extra");
+
+      &:hover {
+        background-color: lighten(theme-color("special-extra"), 10%);
+      }
+    }
+  }
+
+  &__elem,
+  a {
+    text-transform: uppercase;
+    padding: $gutter * 2;
+    color: theme-color("light") !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+}

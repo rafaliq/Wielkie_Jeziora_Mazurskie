@@ -1,0 +1,21 @@
+html,
+body {
+  font-family: map-get($font-family, "main"), sans-serif;
+  overflow-x: initial;
+  margin-top: 0 !important;
+}
+
+#wpadminbar {
+  opacity: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.gmp_map_opts,
+.gmpMapDetailsContainer,
+.gmp_MapPreview {
+  height: 100% !important;
+  min-height: 300px;
+}

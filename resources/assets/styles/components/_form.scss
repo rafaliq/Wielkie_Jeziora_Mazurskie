@@ -1,0 +1,85 @@
+.form {
+  color: theme-color("special_dark");
+  margin-top: $gutter * 6;
+
+  @include media("md") {
+    margin-top: 0;
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: $gutter * 2;
+  }
+
+  &__wrapper {
+    margin-top: $gutter * 3;
+  }
+
+  &__input {
+    padding: $gutter ($gutter * 1.5);
+    background: 0;
+    border: $gutter * 0.2 solid rgba(theme-color("special_dark"), 0.5);
+    width: 100%;
+    margin-bottom: $gutter * 1.5;
+
+    &::placeholder {
+      font-style: normal;
+      color: rgba(theme-color("special_dark"), 50%);
+    }
+  }
+
+  &__checkbox-wrapper {
+    position: relative;
+    padding-left: $gutter * 3;
+  }
+
+  &__checkbox {
+    @extend .absolute;
+
+    bottom: unset;
+    right: unset;
+    top: $gutter * 0.4;
+
+    &::before {
+      @extend .absolute;
+
+      bottom: unset;
+      right: unset;
+      content: "";
+      width: $gutter * 2;
+      height: $gutter * 2;
+      background-color: theme-color("light");
+      border: $gutter * 0.2 solid rgba(theme-color("special_dark"), 0.5);
+    }
+
+    &::after {
+      @extend .absolute;
+
+      bottom: unset;
+      right: unset;
+      top: $gutter * 0.5;
+      left: $gutter * 0.5;
+      content: "";
+      width: $gutter;
+      height: $gutter;
+      background-color: theme-color("special");
+      opacity: 0;
+      transition: $transition;
+    }
+
+    &:checked {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: $gutter * 3;
+  }
+
+  &__label {
+    cursor: pointer;
+    font-size: 8pt;
+  }
+}

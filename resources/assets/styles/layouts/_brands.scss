@@ -1,0 +1,31 @@
+.brands {
+  &__item {
+    margin-bottom: $gutter * 3;
+
+    a {
+      padding-top: 50%;
+      width: 100%;
+      position: relative;
+      display: block;
+      background-color: theme-color("greyy");
+    }
+
+    img {
+      @extend .absolute;
+      @extend .image;
+    }
+  }
+
+  &__title {
+    @extend .absolute;
+
+    margin: auto;
+    text-align: center;
+    height: $gutter * 3;
+    font-size: 14pt;
+
+    @include media("md") {
+      font-size: 20pt;
+    }
+  }
+}

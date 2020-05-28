@@ -1,0 +1,42 @@
+.page-template-template-custom {
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+
+  td {
+    border-right: 1px solid map-get($theme-colors, "dark");
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  tr {
+    font-size: 17px;
+    border-bottom: 1px solid map-get($theme-colors, "dark");
+    padding: $gutter 0;
+
+    &:first-child {
+      border-bottom: 2px solid map-get($theme-colors, "dark");
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.wp-block-table.is-style-stripes tr {
+  background-color: lighten(map-get($theme-colors, "light"), 20%);
+
+  &:nth-child(odd) {
+    background-color: darken(map-get($theme-colors, "light"), 20%);
+  }
+}

@@ -1,0 +1,68 @@
+.projects {
+  padding: 0;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  color: theme-color("light");
+
+  @include media("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item,
+  li {
+    background-color: $primary-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      color: theme-color("light");
+    }
+
+    &:nth-child(2n) {
+      background-color: $primary;
+
+      &:hover {
+        background-color: darken($secondary, 20);
+      }
+    }
+  }
+
+  &__elem,
+  a {
+    position: relative;
+    padding: gutter(5) gutter(5) gutter(7);
+    color: theme-color("light") !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+
+    &:hover {
+      color: inherit;
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+
+  &__desc {
+    padding-top: gutter(2);
+  }
+
+  &__svg {
+    fill: $white;
+    transition: $transition;
+  }
+}

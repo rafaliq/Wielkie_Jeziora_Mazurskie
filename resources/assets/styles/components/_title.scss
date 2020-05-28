@@ -1,0 +1,99 @@
+.text {
+  font-weight: 400;
+  font-family: map-get($font-family, "main"), sans-serif;
+  margin-bottom: 0;
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+}
+
+.heading {
+  font-family: map-get($font-family, "title"), sans-serif;
+  margin-bottom: 0;
+  display: block;
+}
+
+.headline {
+  @include font-size("headline");
+
+  font-weight: 600;
+  letter-spacing: $gutter * 0.2;
+}
+
+h1,
+h2,
+.title {
+  @include font-size("title");
+
+  font-weight: 600;
+  line-height: 1.3;
+
+  &--small {
+    @include font-size("title-small");
+
+    font-weight: 600;
+    line-height: 1.3;
+  }
+}
+
+h3,
+.subheader {
+  @include font-size("subheader");
+
+  font-weight: 400;
+}
+
+blockquote,
+.quote {
+  @include font-size("quote");
+
+  font-weight: "light";
+  font-style: italic;
+}
+
+strong,
+b,
+.large-body {
+  @include font-size("body");
+
+  line-height: 2;
+}
+
+p,
+.body {
+  @include font-size("body");
+}
+
+.secondary-body {
+  @include font-size("secondary-body");
+}
+
+::placeholder,
+.placeholder {
+  @include font-size("placeholder");
+
+  font-style: italic;
+}
+
+button,
+a,
+.button {
+  @include font-size("button");
+
+  font-family: map-get($font-family, "title"), sans-serif;
+  font-weight: 600;
+}
+
+.link {
+  text-decoration: underline;
+  color: theme-color("special-extra");
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

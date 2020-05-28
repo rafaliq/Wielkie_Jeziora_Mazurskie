@@ -1,0 +1,85 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  light: #fff,
+  dark: #000,
+  greyy: #e5e9eb,
+  special: #005f2b,
+  special_dark: #162e5e,
+  special-extra: #1083c7
+);
+
+$primary: #005f2b;
+$primary-light: #1a8b4d;
+$secondary: #1083c7;
+$black: #000;
+$white: #fff;
+$grey: #e5e9eb;
+$grey-dark: #656565;
+
+$media: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1440px
+);
+
+$transition: 0.4s;
+
+$font-size: (
+  headline: (
+    56pt,
+    20pt
+  ),
+  title: (
+    24pt,
+    20pt
+  ),
+  title-small: (
+    19pt,
+    16pt
+  ),
+  subheader: (
+    14pt,
+    14pt
+  ),
+  quote: (
+    20pt,
+    14pt
+  ),
+  body: (
+    12.5pt,
+    12.5pt
+  ),
+  secondary-body: (
+    9pt,
+    9pt
+  ),
+  placeholder: (
+    12pt,
+    10pt
+  ),
+  button: (
+    10pt,
+    10pt
+  )
+);
+
+$font-family: (
+  main: "Open Sans",
+  title: "Open Sans"
+);
+
+$gutter: 10px;
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$z-index: (
+  infobar: 200,
+  header: 100,
+  preloader: 300
+);

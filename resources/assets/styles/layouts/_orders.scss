@@ -1,0 +1,30 @@
+.orders {
+  padding: 0;
+  margin-top: gutter(2);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: gutter(8);
+  color: $black;
+
+  @include media("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+
+  &__desc {
+    padding: gutter(3) 0 gutter(1);
+  }
+
+  &__button {
+    padding: gutter(3) 0;
+  }
+}

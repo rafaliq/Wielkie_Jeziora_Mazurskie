@@ -1,0 +1,46 @@
+.single-post {
+  align-items: flex-start;
+
+  &__avatar {
+    margin-bottom: $gutter * 3;
+
+    @include media(lg) {
+      margin-right: -$gutter * 3;
+    }
+
+    &--last {
+      margin-bottom: $gutter * 6;
+    }
+  }
+
+  &__image {
+    height: auto;
+    margin-bottom: $gutter * 6;
+
+    @include media(lg) {
+      margin-right: -$gutter * 3;
+    }
+  }
+
+  &__sidebar {
+    @include media(lg) {
+      margin-right: -$gutter * 3;
+      position: sticky;
+      top: $gutter * 10;
+    }
+  }
+
+  &__content {
+    &--full {
+      .raports {
+        .wp-block-column {
+          grid-template-columns: 1fr;
+
+          @include media(lg) {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

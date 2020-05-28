@@ -1,0 +1,37 @@
+p,
+ul,
+li,
+.text {
+  font-size: 17px;
+  margin: 0;
+
+  &--major {
+    font-size: 20px;
+
+    @include media(sm) {
+      font-size: 25px;
+    }
+  }
+
+  &--special {
+    font-family: "Teko", sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  &--special-color {
+    color: map-get($theme-colors, "special");
+  }
+
+  &--light {
+    font-weight: 300;
+  }
+
+  &--bold {
+    font-weight: 800;
+  }
+
+  &--semi-bold {
+    font-weight: 500;
+  }
+}

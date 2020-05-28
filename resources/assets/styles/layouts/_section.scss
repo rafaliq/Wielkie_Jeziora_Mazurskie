@@ -1,0 +1,44 @@
+.section {
+  $root: &;
+
+  padding: ($gutter * 3) 0;
+  color: $primary;
+
+  &--home {
+    padding: gutter(6) 0;
+  }
+
+  &--color {
+    background: theme-color("greyy");
+    padding: gutter(8) 0;
+  }
+
+  &--special {
+    padding: 0;
+    margin: ($gutter * 3) 0;
+    background: theme-color("greyy");
+  }
+
+  &--light {
+    background: theme-color("light");
+    padding: ($gutter * 6) 0;
+
+    & + .section--light {
+      padding-top: 0;
+    }
+
+    & + .section--special {
+      margin: 0;
+    }
+
+    & + .section--special + .footer {
+      padding-top: $gutter * 6;
+    }
+  }
+
+  &__header {
+    position: relative;
+    text-align: center;
+    padding: 0 0 ($gutter * 6);
+  }
+}

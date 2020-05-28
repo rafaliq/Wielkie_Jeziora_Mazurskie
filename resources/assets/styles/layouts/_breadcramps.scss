@@ -1,0 +1,26 @@
+.breadcramps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: theme-color("special_dark");
+
+  &__item {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "/";
+      position: relative;
+      left: unset;
+      margin: 0 ($gutter * 0.75);
+      top: $gutter * 0.2;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.team {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: $gutter * 3;
+  padding-left: 0;
+
+  @include media("md") {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

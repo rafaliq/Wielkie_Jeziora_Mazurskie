@@ -1,0 +1,78 @@
+$slider-size: 60vh;
+
+.slider {
+  width: 100%;
+  position: relative;
+  height: $slider-size;
+  overflow: hidden;
+  margin-top: $gutter * 10;
+  background: theme-color("special_dark");
+
+  &__carousel {
+    padding: 0;
+    height: 100%;
+  }
+
+  &__cell {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__img {
+    position: absolute;
+    padding: 0;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    height: 1000px;
+    max-height: 100%;
+    opacity: 0.5;
+  }
+
+  &__baner {
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: $gutter * 8;
+
+    @include media(md) {
+      align-items: center;
+      padding-bottom: 0;
+    }
+  }
+
+  &__header {
+    color: theme-color("light");
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .flickity-viewport {
+    max-height: $slider-size;
+  }
+
+  .flickity-page-dots {
+    bottom: $gutter * 2;
+  }
+
+  .dot {
+    width: $gutter * 2;
+    height: $gutter * 2;
+    background-color: theme-color("special");
+    border-radius: 100%;
+  }
+
+  & + section {
+    padding-top: $gutter * 6;
+
+    @include media(md) {
+      padding-top: $gutter * 6;
+    }
+  }
+}

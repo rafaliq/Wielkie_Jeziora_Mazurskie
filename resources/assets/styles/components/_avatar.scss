@@ -1,0 +1,42 @@
+.avatar {
+  background: theme-color("greyy");
+  color: theme-color("special_dark");
+  padding: ($gutter * 2) ($gutter * 1.5) ($gutter * 1.5);
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  position: relative;
+
+  &__image {
+    width: $gutter * 6;
+    height: $gutter * 6;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+    margin-right: $gutter * 1.5;
+  }
+
+  &__wrapper {
+    width: calc(100% - #{$gutter * 7.5});
+  }
+
+  &__title {
+    font-weight: 600;
+  }
+
+  &__content {
+    margin-bottom: 0;
+
+    a {
+      font-size: inherit;
+      font-weight: inherit;
+    }
+
+    .link {
+      font-size: 7pt;
+      margin: 0 auto;
+      font-weight: 600;
+      padding-top: $gutter;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.share {
+  $root: &;
+
+  &__title {
+    font-weight: 600;
+
+    #{$root}__icon {
+      margin-left: $gutter;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: $gutter * 1.5;
+  }
+
+  &__elem {
+    @include font-size("subheader");
+
+    transition: $transition;
+
+    &:hover {
+      color: theme-color("special-extra");
+    }
+  }
+}
