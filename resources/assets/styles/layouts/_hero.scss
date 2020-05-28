@@ -1,4 +1,4 @@
-$hero-size: 60vh;
+$hero-size: gutter(54);
 
 .hero {
   position: relative;
@@ -27,6 +27,14 @@ $hero-size: 60vh;
     padding: gutter(5) gutter(5) gutter(7);
     max-width: gutter(60);
     transition: $transition;
+
+    br {
+      display: none;
+
+      @include media(md) {
+        display: block;
+      }
+    }
 
     &:hover {
       color: inherit;
@@ -61,6 +69,10 @@ $hero-size: 60vh;
     height: 1000px;
     max-height: 100%;
     opacity: 1;
+
+    &--cover {
+      opacity: 0.6;
+    }
   }
 }
 

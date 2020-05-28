@@ -49,10 +49,10 @@
     </div>
 
     @if($movie)
-        <video class="hero__img" playsinline="" autoplay="" muted="" loop="" poster="{{ $image['url'] }}">
+        <video class="hero__img @if(!$box) hero__img--cover @endif" playsinline="" autoplay="" muted="" loop="" poster="{{ $image['url'] }}">
             <source src="{{ $movie['url'] }}" type="video/mp4">
         </video>
     @else
-    <img  class="hero__img" src="{{ $image['url'] }}" a lt="{{ $image['alt'] }}">
+    <img  class="hero__img @if(!$box) hero__img--cover @endif" src="{{ $image['url'] }}" a lt="{{ $image['alt'] }}">
     @endif
 </section>
