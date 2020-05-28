@@ -1,6 +1,6 @@
 .footer {
   background-color: theme-color("light");
-  color: theme-color("special_dark");
+  color: $black;
   padding: gutter(6) 0 0;
   border-top: 1px solid $grey;
 
@@ -9,15 +9,21 @@
     display: block;
 
     @include media("md") {
-      display: inline;
+      display: block;
       margin-bottom: 0;
+      max-width: gutter(30);
     }
   }
 
   &__title {
-    font-weight: 600;
-    margin-bottom: $gutter * 1.5;
+    font-weight: 700;
+    margin-bottom: $gutter * 2;
     max-width: $gutter * 26;
+    color: $primary;
+  }
+
+  &__text {
+    color: $black;
   }
 
   &__link-list {
@@ -34,7 +40,20 @@
   &__info {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-row-gap: $gutter * 1.5;
+    grid-row-gap: $gutter * 0.5;
+
+    &:nth-of-type(1) {
+      margin-bottom: gutter(5);
+    }
+  }
+
+  &__link {
+    color: $primary;
+    font-size: 16px;
+
+    &:hover {
+      color: $secondary;
+    }
   }
 
   &__info-list {
@@ -47,18 +66,31 @@
     font-weight: 400;
   }
 
+  &__bottom {
+    border: 1px solid $grey;
+    margin-top: gutter(4);
+  }
+
   &__baner {
-    margin: ($gutter * 6) auto;
     max-width: 100%;
     display: block;
+    border-right: 1px solid $grey;
+    padding: gutter(2) gutter(6) gutter(2) 0;
   }
 
   &__made-wrapper {
     background-color: theme-color("special_dark");
   }
 
+  &__columns {
+    display: grid;
+    grid-template-columns: auto gutter(36);
+    align-items: center;
+  }
+
   &__made-by {
     display: block;
     margin: ($gutter * 3) auto;
+    padding-left: gutter(4);
   }
 }
