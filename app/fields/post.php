@@ -9,7 +9,7 @@ $post = new FieldsBuilder('post');
 $post
     ->setLocation('post_type', '==', 'post')
         ->or('page_template', '==', 'views/page-content.blade.php')
-        ->or('post_type', '==', 'oferty_inwestycyjne')
+        ->or('post_type', '==', 'zamowienia_publiczne')
         ->or('post_type', '==', 'partnerzy');
   
 $post

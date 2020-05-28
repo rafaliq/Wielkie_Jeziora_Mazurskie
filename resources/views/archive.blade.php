@@ -2,7 +2,7 @@
 
 @section('content')
 @php
-    $section = get_field('components', 188);
+    $section = get_field('components', 34);
     $hero = $section[0];
 @endphp
 

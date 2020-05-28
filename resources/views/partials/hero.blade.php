@@ -24,7 +24,7 @@
                     </a>
                 @else
                     <h1 class="headline">
-                        @if(is_post_type_archive( 'oferty_inwestycyjne' ))
+                        @if(is_post_type_archive( 'zamowienia_publiczne' ))
                             {{ get_post_type_object(get_post_type())->label }}
                         @else
                             @if(is_category())
