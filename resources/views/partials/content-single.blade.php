@@ -1,9 +1,18 @@
-@php 
+@php
+  $postid = get_the_ID();
   $hero = get_field('hero');
   $date = get_the_date('d/m/Y');
-  $authors = get_field('author');
   $sidebar = get_field('show_sidebar');
   $image = get_field('sidebar_image');
+
+  $args = array(
+    'numberposts' => -1,
+    'post_type' => 'post',
+    'meta_key' => 'project',
+    'meta_value' => $postid,
+  );
+
+  $posts = get_posts($args);
 @endphp
 
 
@@ -16,13 +25,13 @@
     <div class="row single-post">
       @if($sidebar)
       <div class="single-post__sidebar col-sm-4 col-xl-3">
-        @if($authors)
+        {{-- @if($authors)
           @foreach ($authors as $author )
           <div class="single-post__avatar @if( $loop -> last ) single-post__avatar--last @endif">
             @include('components.avatar', ['member'=>$author])
           </div>
           @endforeach
-        @endif
+        @endif --}}
         @if($image)
           <img class="single-post__image" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
         @endif
@@ -34,6 +43,9 @@
         <article>
           <div class="entry-content">
             @php the_content() @endphp
+            @if($posts)
+              @include('partials.posts-project', ['posts' => $posts])
+            @endif
           </div>
         </article>
       </div>

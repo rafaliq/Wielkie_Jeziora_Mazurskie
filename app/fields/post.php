@@ -10,7 +10,8 @@ $post
     ->setLocation('post_type', '==', 'post')
         ->or('page_template', '==', 'views/page-content.blade.php')
         ->or('post_type', '==', 'zamowienia_publiczne')
-        ->or('post_type', '==', 'partnerzy');
+        ->or('post_type', '==', 'partnerzy')
+        ->or('post_type', '==', 'projekty');
   
 $post
     ->addTab('header', ['placement' => 'left'])
@@ -19,8 +20,6 @@ $post
         ->endGroup('hero')
     ->addTab('sidebar', ['placement' => 'left'])
         ->addTrueFalse('show_sidebar', ['label'=> 'Pokazać boczny panel', 'default_value'=>'1'])
-        ->addRelationship('author', ['label'=> 'Autor', 'post_type'=>'team'])
-            ->conditional('show_sidebar', '==', '1')     
         ->addImage('sidebar_image', ['label'=> 'Zdjęcie'])
             ->conditional('show_sidebar', '==', '1');
         

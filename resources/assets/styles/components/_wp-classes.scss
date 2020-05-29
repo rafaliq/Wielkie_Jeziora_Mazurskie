@@ -54,3 +54,7 @@
   @extend .sr-only;
   @extend .sr-only-focusable;
 }
+
+.entry-content {
+  padding-bottom: gutter(6);
+}
