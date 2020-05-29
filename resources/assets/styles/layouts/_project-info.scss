@@ -1,0 +1,16 @@
+.project-info {
+  //background-color: lighten($grey, 5);
+  color: $black;
+  margin-bottom: gutter(4);
+
+  td {
+    padding: gutter(1.25);
+    border: 1px solid darken($grey, 8);
+
+    &:nth-of-type(odd) {
+      //background: darken($secondary, 5);
+      font-weight: 600;
+      color: $primary;
+    }
+  }
+}

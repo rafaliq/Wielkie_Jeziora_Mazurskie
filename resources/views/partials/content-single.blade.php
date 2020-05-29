@@ -32,7 +32,10 @@
           </div>
           @endforeach
         @endif --}}
-        @if($image)
+        @if(get_post_type() == 'projekty')
+          @include('partials.project-info')
+        @endif
+        @if($image && (get_post_type() !== 'projekty'))
           <img class="single-post__image" src="{{ $image['url'] }}" alt="{{ $image['alt'] }}">
         @endif
         @include('partials.taglist')

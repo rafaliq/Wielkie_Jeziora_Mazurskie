@@ -6,6 +6,7 @@
   grid-gap: $gutter * 3;
   grid-auto-rows: 1fr;
   padding: 0 ($gutter * 1.5);
+  color: $primary;
 
   @include media("md") {
     grid-template-columns: repeat(2, 1fr);

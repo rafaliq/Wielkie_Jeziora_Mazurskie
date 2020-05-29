@@ -2,7 +2,7 @@
   $root: &;
 
   padding: ($gutter * 3) 0;
-  color: $primary;
+  //color: $primary;
 
   &--home {
     padding: gutter(6) 0;
@@ -40,5 +40,6 @@
     position: relative;
     text-align: center;
     padding: 0 0 ($gutter * 6);
+    color: $primary;
   }
 }
