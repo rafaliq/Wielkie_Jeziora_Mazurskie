@@ -5,7 +5,7 @@
         Wartość projektu:
       </td>
       <td>
-        10 000 zł
+        {{ $info['p1'] }}
       </td>
     </tr>
     <tr>
@@ -13,7 +13,7 @@
         Wartość dofinansowania:
       </td>
       <td>
-        5 000 zł
+        {{ $info['p2'] }}
       </td>
     </tr>
     <tr>
@@ -21,7 +21,7 @@
         Beneficjent:
       </td>
       <td>
-        Rafał
+        {{ $info['p3'] }}
       </td>
     </tr>
     <tr>
@@ -29,15 +29,15 @@
         Partnerzy:
       </td>
       <td>
-        IQ Connect
+        {{ $info['p4'] }}
       </td>
     </tr>
     <tr>
       <td>
-        czas trwania:
+        Czas trwania:
       </td>
       <td>
-        100 lat
+        {{ $info['p5'] }}
       </td>
     </tr>
     <tr>
@@ -45,7 +45,7 @@
         Źródło finansowania:
       </td>
       <td>
-        Robert
+        {{ $info['p6'] }}
       </td>
     </tr>
   </tbody>
