@@ -12,12 +12,12 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-sm-5">
+      <div class="col-12 d-none d-md-block col-sm-12 col-md-4">
         <a class="footer__brand" href="{{ home_url('/') }}">
           <img src="{{  get_field('logo', 'options')['url'] }}" alt="{{ get_field('logo', 'options')['title'] }}">
         </a>
       </div>
-      <div class="col-12 col-sm-4 footer__wrapper">
+      <div class="col-12 col-sm-12 col-md-4 footer__wrapper">
         <p class="footer__title subheader">
           {{ $title  }}
         </p>
@@ -36,7 +36,7 @@
         </ul>
         @endif
       </div>
-      <div class="col-12 col-sm-3 footer__wrapper">
+      <div class="col-12 col-sm-12 col-md-4 footer__wrapper">
         <address class="footer__info">
           @if ($tels)
             <span class="footer__info-label">

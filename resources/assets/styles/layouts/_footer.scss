@@ -7,11 +7,11 @@
   &__brand {
     margin-bottom: $gutter * 3;
     display: block;
+    max-width: gutter(25);
 
     @include media("md") {
       display: block;
       margin-bottom: 0;
-      max-width: gutter(30);
     }
   }
 
@@ -24,6 +24,7 @@
 
   &__text {
     color: $black;
+    margin-bottom: $gutter * 4;
   }
 
   &__link-list {
@@ -74,8 +75,12 @@
   &__baner {
     max-width: 100%;
     display: block;
-    border-right: 1px solid $grey;
-    padding: gutter(2) gutter(6) gutter(2) 0;
+    padding: gutter(2) 0;
+
+    @include media("md") {
+      border-right: 1px solid $grey;
+      padding: gutter(2) gutter(6) gutter(2) 0;
+    }
   }
 
   &__made-wrapper {
@@ -84,13 +89,21 @@
 
   &__columns {
     display: grid;
-    grid-template-columns: auto gutter(36);
+    grid-template-columns: 1fr;
     align-items: center;
+
+    @include media("md") {
+      grid-template-columns: auto gutter(36);
+    }
   }
 
   &__made-by {
     display: block;
     margin: ($gutter * 3) auto;
-    padding-left: gutter(4);
+    padding: 0;
+
+    @include media("md") {
+      padding-left: gutter(4);
+    }
   }
 }

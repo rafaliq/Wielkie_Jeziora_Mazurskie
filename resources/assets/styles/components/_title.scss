@@ -91,7 +91,7 @@ a,
 
 .link {
   text-decoration: underline;
-  color: theme-color("special-extra");
+  color: $primary-light;
 
   &:hover {
     text-decoration: underline;
