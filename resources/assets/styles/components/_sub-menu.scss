@@ -5,7 +5,7 @@
   list-style: none;
   padding: $gutter ($gutter * 2) ($gutter * 2);
   color: theme-color("light");
-  background-color: theme-color("special_dark");
+  background-color: $primary;
   opacity: 1;
   transition: $transition;
   z-index: 99;
@@ -24,7 +24,7 @@
 
   .menu-item.menu-item a {
     &:hover {
-      color: #5c91dc;
+      color: lighten($primary-light, 15);
     }
   }
 }
