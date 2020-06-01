@@ -4,7 +4,7 @@
     $form_terms = get_field('form_terms', 'options');
 @endphp
 
-<form id="form" class="form" action="https://mazurytobiznes.pl/mail.php" method="POST" form>
+<form id="form" class="form" action="#" method="POST" form>
     <h2 class="form__title subheader">
         {{ $form_title }}
     </h2>
