@@ -48,7 +48,7 @@
   </div>
 </section>
 
-@include('partials.partners')
+{{-- @include('partials.partners') --}}
 
 
 

@@ -27,4 +27,8 @@
       color: lighten($primary-light, 15);
     }
   }
+
+  .current-menu-item {
+    color: lighten($primary-light, 15) !important;
+  }
 }

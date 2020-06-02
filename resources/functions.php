@@ -256,3 +256,13 @@ function news($count) {
 function format_date($date) {
     return date("d/m/Y", strtotime($date));
 }
+
+function themeprefix_show_cpt_archives( $query ) {
+    if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+        $query->set( 'post_type', array(
+        'post', 'nav_menu_item', 'zamowienia_publiczne'
+        ));
+        return $query;
+        }
+   }
+add_filter( 'pre_get_posts', 'themeprefix_show_cpt_archives' );

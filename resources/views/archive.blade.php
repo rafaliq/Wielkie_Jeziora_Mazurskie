@@ -29,7 +29,7 @@
             </div>
         </div>
     </section>
-    @include('partials.partners')
+    {{-- @include('partials.partners') --}}
 
   {!! get_the_posts_navigation() !!}
 @endsection
