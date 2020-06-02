@@ -23,7 +23,7 @@
     </div>
 </form>
 
-<script>
+{{-- <script>
   $(function() {
       $('#form').on('submit', function (e) {
         e.preventDefault();
@@ -37,4 +37,4 @@
         });
       });
   });
-</script>
+</script> --}}

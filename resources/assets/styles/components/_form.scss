@@ -1,6 +1,7 @@
 .form {
-  color: theme-color("special_dark");
+  color: $black;
   margin-top: $gutter * 6;
+  padding-bottom: gutter(2);
 
   @include media("md") {
     margin-top: 0;
@@ -18,13 +19,13 @@
   &__input {
     padding: $gutter ($gutter * 1.5);
     background: 0;
-    border: $gutter * 0.2 solid rgba(theme-color("special_dark"), 0.5);
+    border: $gutter * 0.2 solid rgba($primary, 0.5);
     width: 100%;
     margin-bottom: $gutter * 1.5;
 
     &::placeholder {
       font-style: normal;
-      color: rgba(theme-color("special_dark"), 50%);
+      color: rgba($primary, 50%);
     }
   }
 
@@ -49,7 +50,7 @@
       width: $gutter * 2;
       height: $gutter * 2;
       background-color: theme-color("light");
-      border: $gutter * 0.2 solid rgba(theme-color("special_dark"), 0.5);
+      border: $gutter * 0.2 solid rgba($primary, 0.5);
     }
 
     &::after {
@@ -62,7 +63,7 @@
       content: "";
       width: $gutter;
       height: $gutter;
-      background-color: theme-color("special");
+      background-color: $primary;
       opacity: 0;
       transition: $transition;
     }

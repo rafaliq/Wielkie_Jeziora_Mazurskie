@@ -1,5 +1,5 @@
 .contact {
-  color: theme-color("special_dark");
+  color: $black;
 
   &__header {
     margin-bottom: $gutter * 1.5;
@@ -33,10 +33,10 @@
   }
 
   &__info {
-    margin-top: $gutter * 3;
+    margin-top: $gutter * 4;
     display: grid;
     grid-template-columns: ($gutter * 10) 2fr;
-    grid-row-gap: $gutter * 3;
+    grid-row-gap: $gutter;
   }
 
   &__info-list {
