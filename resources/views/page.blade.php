@@ -12,11 +12,20 @@
   @foreach ($sections as $section)
     @php ($sectionName = $section['acf_fc_layout']) @endphp
 
-    {{-- SLIDER --}} 
+    {{-- SLIDER --}}
     @includeWhen($sectionName == 'slider', 'partials.slider', ['data' => $section])
 
-    {{-- HERO --}} 
+    {{-- HERO --}}
     @includeWhen($sectionName == 'Hero', 'partials.hero', ['data' => $section])
+
+    {{-- NEWS --}}
+    @includeWhen($sectionName == 'news', 'partials.news', ['data' => $section])
+
+    {{-- PROJECTS --}}
+    @includeWhen($sectionName == 'projects', 'partials.projects', ['data' => $section])
+
+    {{-- ORDERS --}}
+    @includeWhen($sectionName == 'orders', 'partials.orders', ['data' => $section])
 
     {{-- TEXT IMG --}} 
     @includeWhen($sectionName == 'textImg', 'partials.text-img', ['data' => $section])
@@ -44,9 +53,6 @@
     
     {{-- Content --}}
     @includeWhen($sectionName == 'content', 'partials.my-content', ['data' => $section])
-
-    {{-- News --}}
-    @includeWhen($sectionName == 'news', 'partials.news')
 
 
   @endforeach

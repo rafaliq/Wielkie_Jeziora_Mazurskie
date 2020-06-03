@@ -2,7 +2,7 @@
   <div class="container">
     <div class="col-12 section__header">
       <h2 class="title">
-        Aktualności
+        {{ $data['title'] }}
       </h2>
     </div>
     <div class="row">
@@ -50,5 +50,3 @@
   </div>
   </div>
 </section>
-@include('partials.projects')
-@include('partials.orders')

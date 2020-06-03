@@ -18,7 +18,7 @@ $orders = get_posts($args);
   <div class="container">
     <div class="col-12 section__header">
       <h2 class="title">
-        Zamówienia publiczne
+        {{ $data['title'] }}
       </h2>
     </div>
     <div class="orders">
