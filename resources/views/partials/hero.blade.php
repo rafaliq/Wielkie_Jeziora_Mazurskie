@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col">
                 @if($box)
-                    <a href="#" class="hero__box">
+                    <a href="@if($data['link']) {{ $data['link']['url'] }} @endif" class="hero__box">
                         <h2 class="title">
                             {{ $title }}
                         </h2>
