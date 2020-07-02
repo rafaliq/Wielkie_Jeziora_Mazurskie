@@ -48,6 +48,10 @@ h3,
   font-weight: 400;
 }
 
+.subheeader {
+  @include font-size("subheeader");
+}
+
 blockquote,
 .quote {
   @include font-size("quote");
