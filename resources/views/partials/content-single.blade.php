@@ -8,7 +8,7 @@
 
   $args = array(
     'numberposts' => -1,
-    'post_type' => 'post',
+    'post_type' => array('post', 'zamowienia_publiczne'),
     'meta_key' => 'project',
     'meta_value' => $postid,
   );
