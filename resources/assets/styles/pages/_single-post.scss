@@ -83,7 +83,10 @@
       }
     }
 
-    //.wp-block-gallery,
+    .wp-block-gallery {
+      display: block;
+    }
+
     .blocks-gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
