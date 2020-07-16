@@ -83,7 +83,8 @@
       }
     }
 
-    .wp-block-gallery {
+    //.wp-block-gallery,
+    .blocks-gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: $gutter;
