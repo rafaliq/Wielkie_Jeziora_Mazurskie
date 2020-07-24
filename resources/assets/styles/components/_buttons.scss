@@ -28,6 +28,11 @@
     }
   }
 
+  &--center {
+    margin: auto;
+    text-align: center;
+  }
+
   &--dark {
     background-color: rgba($black, 0.25);
   }

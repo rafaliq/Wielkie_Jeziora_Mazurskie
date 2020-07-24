@@ -19,13 +19,18 @@
                 {!! get_search_form(false) !!}
                 @endif
                 <ul class="posts">
-                    
+
                     @while (have_posts()) @php the_post() @endphp
                     <li class="posts__list">
                         @include('components.post')
                     </li>
                     @endwhile
                 </ul>
+                @if(strpos(App::title(), 'archiwalne') || strpos(App::title(), 'Zamówienia publiczne'))
+                    <a data-fancybox data-type="iframe" data-src="http://www.7cudowmazur.pl/archiwum" href="javascript:;" class="button button--primary button--center my-5">
+                        Więcej zamówień
+                    </a>
+                @endif
             </div>
         </div>
     </section>

@@ -62,3 +62,28 @@
 .main {
   background: $grey-light;
 }
+
+.wp-block-file {
+  margin: gutter(3) 0;
+  font-weight: 600;
+
+  a:first-child {
+    color: $primary !important;
+    text-decoration: none !important;
+
+    &:hover {
+      text-decoration: underline !important;
+      color: $secondary !important;
+    }
+  }
+
+  &__button {
+    color: $white !important;
+    text-decoration: none !important;
+    background-color: $primary !important;
+
+    &:hover {
+      background-color: $secondary !important;
+    }
+  }
+}

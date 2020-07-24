@@ -9,4 +9,5 @@
     </div>
     {!! get_search_form(false) !!}
   @endif
+
 @endsection

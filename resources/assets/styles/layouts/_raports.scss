@@ -38,6 +38,7 @@
       &:hover {
         background-color: theme-color("special");
         color: theme-color("light") !important;
+        text-decoration: none !important;
 
         &::before {
           filter: brightness(0) invert(1);
