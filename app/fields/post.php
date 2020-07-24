@@ -11,7 +11,8 @@ $post
         ->or('page_template', '==', 'views/page-content.blade.php')
         ->or('post_type', '==', 'zamowienia_publiczne')
         ->or('post_type', '==', 'partnerzy')
-        ->or('post_type', '==', 'projekty');
+        ->or('post_type', '==', 'projekty')
+        ->or('post_type', '==', 'projekty_edukacyjne');
   
 $post
     ->addTab('header', ['placement' => 'left'])

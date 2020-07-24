@@ -26,7 +26,7 @@
                     </li>
                     @endwhile
                 </ul>
-                @if(strpos(App::title(), 'archiwalne') || strpos(App::title(), 'Zamówienia publiczne'))
+                @if(strpos(App::title(), 'Archiwum'))
                     <a data-fancybox data-type="iframe" data-src="http://www.7cudowmazur.pl/archiwum" href="javascript:;" class="button button--primary button--center my-5">
                         Więcej zamówień
                     </a>
