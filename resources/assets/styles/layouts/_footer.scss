@@ -1,7 +1,7 @@
 .footer {
   background-color: theme-color("light");
   color: $black;
-  padding: gutter(6) 0 0;
+  //padding: gutter(6) 0 0;
   //border-top: 1px solid $grey;
 
   &__brand {
@@ -69,7 +69,7 @@
 
   &__bottom {
     border: 1px solid $grey;
-    margin-top: gutter(4);
+    //margin-top: gutter(4);
   }
 
   &__baner {
@@ -78,7 +78,7 @@
     padding: gutter(2) 0;
 
     @include media("md") {
-      border-right: 1px solid $grey;
+      //border-right: 1px solid $grey;
       padding: gutter(2) gutter(6) gutter(2) 0;
     }
   }
@@ -93,7 +93,7 @@
     align-items: center;
 
     @include media("md") {
-      grid-template-columns: auto gutter(36);
+      grid-template-columns: 1fr;
     }
   }
 
@@ -101,9 +101,10 @@
     display: block;
     margin: ($gutter * 3) auto;
     padding: 0;
+    width: gutter(8);
 
     @include media("md") {
-      padding-left: gutter(4);
+      width: gutter(10);
     }
   }
 }

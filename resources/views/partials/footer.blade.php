@@ -10,7 +10,7 @@
 @endphp
 
 <footer class="footer">
-  <div class="container">
+  {{-- <div class="container">
     <div class="row">
       <div class="col-12 d-none d-md-block col-sm-12 col-md-4">
         <a class="footer__brand" href="{{ home_url('/') }}">
@@ -89,10 +89,14 @@
         </address> 
       </div>
     </div>
-  </div>
+  </div> --}}
   <div class="footer__bottom">
     <div class="container footer__columns">
       <img class="footer__baner" src="@asset('images/eu-1.jpg')" alt="UE">
+    </div>
+  </div>
+  <div class="bg-primary">
+    <div class="container footer__columns">
       <a href="http://iqconnect.pl">
         <img src="@asset('images/logo.png')" alt="strony internetowe iqconnect.pl" class="footer__made-by">
       </a>
