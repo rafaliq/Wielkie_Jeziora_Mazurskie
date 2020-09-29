@@ -12,6 +12,20 @@
     transition: $transition;
   }
 
+  &--more {
+    margin: auto;
+    text-align: center;
+    border: 1px solid $primary;
+    background: transparent;
+    transition: $transition;
+    padding: gutter(1) gutter(1.2) !important;
+
+    &:hover {
+      color: $white;
+      background-color: $primary;
+    }
+  }
+
   &--corner {
     position: absolute;
     bottom: 0;

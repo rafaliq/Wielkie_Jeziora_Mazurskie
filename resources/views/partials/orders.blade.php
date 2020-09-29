@@ -38,5 +38,12 @@ $orders = get_posts($args);
         </div>
       @endforeach
     </div>
+
+    <div class="mx-auto text-center mt-5">
+      <a href="./zamowienia_publiczne/" class="button button--more button--small">
+        Pokaż wszystkie
+      </a>
+    </div>
+
   </div>
 </section>

@@ -40,5 +40,10 @@ $projects = get_posts($args);
         </li>
       @endforeach
     </ul>
+    <div class="mx-auto text-center mt-5">
+      <a href="./projekty/" class="button button--more button--small">
+        Pokaż wszystkie
+      </a>
+    </div>
   </div>
 </section>

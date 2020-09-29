@@ -47,6 +47,11 @@
           </li>
         @endforeach
       </ul>
+      <div class="mx-auto text-center mt-5">
+        <a href="./aktualnosci/" class="button button--more button--small">
+          Pokaż wszystkie
+        </a>
+      </div>
   </div>
   </div>
 </section>
