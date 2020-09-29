@@ -16,7 +16,7 @@
   $posts = get_posts($args);
 @endphp
 
-@include('partials.hero', ['data'=>$hero, 'date'=> $date])
+@include('partials.hero', ['data'=>$hero, 'date'=> $date, 'herosmall' => true])
 @include('partials.breadcramps')
 
 <section class="section">

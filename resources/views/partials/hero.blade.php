@@ -6,7 +6,7 @@
     $box =$data['box'];
 @endphp
 
-<section class="hero">
+<section class="hero @if($herosmall) hero--small @endif">
     <div class="container hero__content">
         <div class="row">
             <div class="col">

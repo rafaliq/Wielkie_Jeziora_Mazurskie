@@ -13,6 +13,10 @@ $hero-size: gutter(54);
   //text-transform: uppercase;
   overflow: hidden;
 
+  &--small {
+    max-height: gutter(30);
+  }
+
   &__content {
     position: relative;
     z-index: 10;

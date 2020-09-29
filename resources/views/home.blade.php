@@ -7,7 +7,7 @@
 @endphp
 
 
-    @include('partials.hero', ['data'=>$hero])
+    @include('partials.hero', ['data'=>$hero, 'herosmall' => true])
     @include('partials.breadcramps')
     <section class="section">
         <div class="container">
