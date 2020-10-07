@@ -73,9 +73,10 @@
   }
 
   &__baner {
-    max-width: 100%;
+    max-width: gutter(95);
     display: block;
     padding: gutter(2) 0;
+    margin: auto;
 
     @include media("md") {
       //border-right: 1px solid $grey;
@@ -91,6 +92,7 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
+    margin: auto;
 
     @include media("md") {
       grid-template-columns: 1fr;
@@ -99,12 +101,12 @@
 
   &__made-by {
     display: block;
-    margin: ($gutter * 3) auto;
+    margin: ($gutter * 2) auto;
     padding: 0;
-    width: gutter(8);
+    width: gutter(6);
 
     @include media("md") {
-      width: gutter(10);
+      width: gutter(9);
     }
   }
 }

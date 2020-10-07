@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col">
                 @if($box)
-                    <a href="@if($data['link']) {{ $data['link']['url'] }} @endif" class="hero__box">
+                    {{-- <a href="@if($data['link']) {{ $data['link']['url'] }} @endif" class="hero__box">
                         <h2 class="title">
                             {{ $title }}
                         </h2>
@@ -21,7 +21,7 @@
                         <div class="button button--corner">
                             @include('svg.arrow', ['class' => 'hero__svg'])
                         </div>
-                    </a>
+                    </a> --}}
                 @else
                     <h1 class="headline">
                         @if(is_post_type_archive('zamowienia_publiczne') || is_post_type_archive('projekty') || is_post_type_archive('projekty_edukacyjne'))

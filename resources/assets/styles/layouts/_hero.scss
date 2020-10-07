@@ -69,9 +69,7 @@ $hero-size: gutter(54);
     max-width: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center center;
-    height: 1000px;
-    max-height: 100%;
+    object-position: center 100px;
     opacity: 1;
 
     &--cover {
